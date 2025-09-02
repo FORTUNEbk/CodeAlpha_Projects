@@ -10,8 +10,11 @@ public class gradeTrucker {
         while(true){
             System.out.println("Enter students grade(or -1 to finish)");
             int grade = scanner.nextInt();
+        
+
             if(grade == -1) break;
             grades.add(grade);
+
         }
 
         if(grades.isEmpty()){
@@ -25,8 +28,8 @@ public class gradeTrucker {
 
         for(int grade:grades){
             sum +=grade;
-            if(grade > highest) grade = highest;
-            if(grade < lowest) grade = lowest;
+            if(grade > highest) highest = grade;
+            if(grade < lowest) lowest = grade;
 
         }
 
